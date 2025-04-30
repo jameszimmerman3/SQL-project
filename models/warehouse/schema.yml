@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: fact_reddit_posts
+    description: "Fact table containing Reddit post metrics extracted from the Reddit API"
+    columns:
+      - name: id
+        description: "Unique ID of the Reddit post"
+      - name: title
+        description: "Title of the Reddit post"
+      - name: selftext
+        description: "Body content of the post"
+      - name: author
+        description: "Username of the post creator"
+      - name: score
+        description: "Upvote score of the post"
+      - name: num_comments
+        description: "Number of comments on the post"
+      - name: permalink
+        description: "Permalink to the Reddit post"
+      - name: created_utc
+        description: "UTC timestamp of post creation"
+
+  - name: fact_glassdoor_reviews
+    description: "Fact table containing metadata scraped from Glassdoor job review pages"
+    columns:
+      - name: og_title
+        description: "Open Graph title of the Glassdoor page"
+      - name: og_description
+        description: "Open Graph description of the page"
+      - name: description
+        description: "Meta description of the Glassdoor page"
+      - name: language
+        description: "Detected language of the content"
+      - name: source_url
+        description: "URL from which the page was scraped"
+      - name: status_code
+        description: "HTTP status code from the scrape"
