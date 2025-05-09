@@ -1,0 +1,27 @@
+name: Snap Web Scrape Pipeline
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 12 * * MON'  # Every Monday at 12:00 UTC
+
+jobs:
+  run_notebook:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install pandas sqlalchemy psycopg2-binary openpyxl papermill
+
+    - name: Run Web Scrape Notebook
+      run: |
+        papermill notebooks/Snap_Web_Scrape_Extract_Load_Raw.ipynb notebooks/output/Snap_Web_Scrape_Executed.ipynb
