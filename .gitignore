@@ -1,0 +1,8 @@
+# Ignore environment config
+.env
+
+# Ignore outputs and other temp files
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+output/
