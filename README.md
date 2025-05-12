@@ -1,7 +1,3 @@
-# SQL-project
-
-# Snap Signals
-
 # Snap Signals
 
 ## Tech Stack
