@@ -27,7 +27,7 @@ This project was inspired by a **Data Scientist role at Snap Inc.**, focused on 
 
 🔗 [Job_Description.pdf](./proposal/Job_Description.pdf)
 
-## 🗂️ Data
+## Data
 
 **Sources:**
 - Reddit API via PRAW (https://www.reddit.com/dev/api/)
@@ -39,10 +39,21 @@ This project was inspired by a **Data Scientist role at Snap Inc.**, focused on 
 
 ## Notebooks / Python Scripts
 
-- [`API_Extract_Load_Raw.ipynb`](./notebooks/API_Extract_Load_Raw.ipynb): Pulls Reddit posts using PRAW and uploads to PostgreSQL  
-- [`Web_Scrape_Extract_Load_Raw.ipynb`](./notebooks/Web_Scrape_Extract_Load_Raw.ipynb): Scrapes Indeed job descriptions and uploads to PostgreSQL  
-- [`API_SQL_Analysis.ipynb`](./notebooks/API_SQL_Analysis.ipynb): Tags posts by topic, ranks themes by score, comments, and era  
-- [`Web_Scrape_SQL_Analysis.ipynb`](./notebooks/Web_Scrape_SQL_Analysis.ipynb): Parses salary, tags seniority and role type, calculates heat index and salary growth
+- [`reddit_API_Extract_Load_Raw.ipynb`](./notebooks/reddit_API_Extract_Load_Raw.ipynb):  
+  Extracts Reddit posts using PRAW, filters by keywords/subreddits, and loads to PostgreSQL.
+
+- [`reddit_API_SQL_Analysis.ipynb`](./notebooks/reddit_API_SQL_Analysis.ipynb):  
+  Tags Reddit posts by topic, ranks themes by upvotes/comments, and analyzes older vs. recent engagement.
+
+- [`github_Snap_Web_Scrape_Extract_Load_Raw_milestone1 (1).ipynb`](./notebooks/github_Snap_Web_Scrape_Extract_Load_Raw_milestone1%20(1).ipynb):  
+  Scrapes public Snap job listings from Indeed using Firecrawl and loads to PostgreSQL.
+
+- [`Indeed_Web_Scrape_SQL_Analysis.ipynb`](./notebooks/Indeed_Web_Scrape_SQL_Analysis.ipynb):  
+  Parses salary ranges, tags job roles and seniority, calculates heat index and salary trends across levels.
+
+- `reddit_snap_cleaned_tagged.csv`:  
+  Cleaned and tagged Reddit dataset used in analysis (not a notebook).
+
 
 ## Future Improvements
 
